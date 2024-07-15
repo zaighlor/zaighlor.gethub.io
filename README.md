@@ -3,78 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Responsive Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1rem;
         }
-        h1, h2, h3 {
-            color: #ffffff;
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
         }
-        h1 {
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
             text-align: center;
-            margin-bottom: 20px;
         }
-        h2 {
-            margin-top: 30px;
+
+        .hero h1 {
+            font-size: 3rem;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+
+        .content {
+            padding: 2rem;
         }
-        li {
-            margin-bottom: 10px;
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .grid-item {
+            flex: 1 1 calc(33.333% - 1rem);
+            background-color: #f4f4f4;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .grid-item {
+                flex: 1 1 calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-item {
+                flex: 1 1 100%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Your Name</h1>
-        </header>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Add your introduction here.</p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Skill 1</li>
-                <li>Skill 2</li>
-                <li>Skill 3</li>
-                <!-- Add more skills as needed -->
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="#">Project 1</a></li>
-                <li><a href="#">Project 2</a></li>
-                <li><a href="#">Project 3</a></li>
-                <!-- Add more projects with links as needed -->
-            </ul>
-        </section>
-        <section id="events">
-            <h2>Events</h2>
-            <ul>
-                <li>Event 1</li>
-                <li>Event 2</li>
-                <li>Event 3</li>
-                <!-- Add more events as needed -->
-            </ul>
-        </section>
-        <footer>
-            <p>Contact: your@email.com</p>
-        </footer>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">MyWebsite</a>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1>Welcome to My Responsive Website</h1>
+    </div>
+
+    <div class="content">
+        <h2>Our Services</h2>
+        <div class="grid">
+            <div class="grid-item">Service 1</div>
+            <div class="grid-item">Service 2</div>
+            <div class="grid-item">Service 3</div>
+            <div class="grid-item">Service 4</div>
+            <div class="grid-item">Service 5</div>
+            <div class="grid-item">Service 6</div>
+        </div>
     </div>
 </body>
 </html>
